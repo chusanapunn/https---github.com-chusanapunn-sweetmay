@@ -30,10 +30,10 @@ const SweetmayHomePage = () => {
                         link="/sweetmay"
                         // bgImage={images[0]}
                         items={[
-                            { title: 'Seasonal' },
-                            { title: 'Pastry' },
-                            { title: 'Bakery' },
-                            { title: 'Cuisine' },
+                            { title: 'Winter 2024 Menu' },
+                            // { title: 'Pastry' },
+                            // { title: 'Bakery' },
+                            // { title: 'Cuisine' },
                         ]}
                     />
                     <Menutab

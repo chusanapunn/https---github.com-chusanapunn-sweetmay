@@ -26,7 +26,7 @@ const SweetCraftHomePage = () => {
 
     return (
         <div>
-<HSection
+{/* <HSection
         title="Sweetcraft"
         bgImage="/craftCover.png"
         items={[
@@ -49,7 +49,7 @@ const SweetCraftHomePage = () => {
             {title:"Italian Cuisine", image: "LINE_ALBUM_F.jpg"},
             ] },
         ]}
-      />
+      /> */}
         </div>
     );
 };

@@ -49,10 +49,10 @@ const Menutab: React.FC<MenuTabProps> = ({ title, items }) => {
   };
 
   return (
-    <div className="flex flex-col px-4 space-y-4">
+    <div className="flex flex-col px-4 space-y-4 ">
 
       {/* Navigation Tabs */}
-      <div className="flex justify-center space-x-2 sm:text-lg text-sm mb-4 overflow-x-auto scrollbar-hide">
+      <div className="flex justify-center space-x-1 text-sm  overflow-x-auto no-scrollbar">
         {items.map((item, index) => (
           <button
             key={index}
@@ -64,11 +64,12 @@ const Menutab: React.FC<MenuTabProps> = ({ title, items }) => {
             {item.title}
           </button>
         ))}
-      </div>
+      </div>      
+      <hr className="border-black w-full my-2" />
 
       {/* Swipeable content section */}
       <div
-        className="flex overflow-x-auto snap-x snap-mandatory space-x-4 px-4 scrollbar-hide"
+        className="flex overflow-x-auto snap-x snap-mandatory space-x-4 p-2 no-scrollbar"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -76,20 +77,20 @@ const Menutab: React.FC<MenuTabProps> = ({ title, items }) => {
         {items.map((item, index) => (
           <div
             key={index}
-            className={`min-w-full snap-center p-6 border rounded-lg shadow-lg flex flex-col items-center justify-center space-y-4 ${
+            className={`min-w-full snap-center rounded-lg shadow-lg flex flex-col items-center justify-center space-y-2 ${
               activeIndex === index ? "block" : "hidden"
             }`}
           >
             {/* Text content */}
-            <div className="text-center">
-              <h3 className="text-3xl font-semibold">{item.title}</h3>
+            <div className="text-center p-3">
+              <h3 className="text-2xl font-semibold">{item.title}</h3>
               <p className="text-lg mt-2 italic">{item.desc}</p>
               <p className="text-lg font-thin mt-2">{item.price}</p>
             </div>
 
             {/* Image content with loading spinner */}
             {item.image && (
-              <div className="relative w-64 h-64 flex-shrink-0">
+              <div className="relative w-256 h-256 flex-shrink-0 p-2 ">
                 {loading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
                     <FaSpinner className="animate-spin text-gray-500 text-xl" />
@@ -98,8 +99,8 @@ const Menutab: React.FC<MenuTabProps> = ({ title, items }) => {
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={256}
-                  height={256}
+                  width={512}
+                  height={512}
                   className="w-full h-auto rounded-lg"
                   onLoad={() => setLoading(false)}
                   onError={() => setLoading(false)}

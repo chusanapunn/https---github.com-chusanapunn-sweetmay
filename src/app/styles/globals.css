@@ -9,7 +9,18 @@
     font-family: ui-sans-serif; /* Example custom font */
     
   }
-  
+html {
+  -webkit-text-size-adjust: 100%; /* Prevent font resizing on Safari */
+}
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Custom Utility Classes */

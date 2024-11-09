@@ -35,7 +35,8 @@ export default function Footer() {
     return (
         <footer className="relative">
             <div className="flex justify-between items-center font-thin font-serif px-4 py-2">
-                <div className="flex">
+
+                <div className="flex text-gray-400">
                     <h1 className="text-2xl tracking-wider">
                         {session ? (
                             <Link href="/myaccount" className="hover:text-gray-400 text-xl">
@@ -47,9 +48,19 @@ export default function Footer() {
                                 Guest
                             </Link>
                         )}
-                    </h1>
-                </div>
 
+                    </h1>
+
+                </div>
+                <div className="flex text-md rounded-xl bg-emerald-300 p-2">
+                    <Link href="https://lin.ee/81x9GA3"> LINE Official
+                    </Link>
+                </div>
+                <div className="flex text-md rounded-xl bg-purple-300 p-2">
+                    <Link href="https://www.instagram.com/invites/contact/?igsh=yqj8hytynosc&utm_content=3gomaqc">
+                        Instagram
+                    </Link>
+                </div>
                 <button onClick={toggleMenu} className="lg:hidden focus:outline-none">
                     <svg
                         className="w-6 h-6 hover:animate-pulse"
@@ -69,7 +80,7 @@ export default function Footer() {
 
                 {/* Navigation Links */}
                 <ul
-                    className={`absolute bottom-full left-0 w-full py-4 space-y-4 text-right z-50 
+                    className={`absolute bottom-full left-0 w-full py-4 space-y-4 text-right z-50 text-gray-400
                     ${isOpen ? 'block' : 'hidden'} lg:relative lg:flex-row lg:bg-transparent lg:p-0 lg:w-auto lg:space-y-0`}
                 >
                     {session ? (
