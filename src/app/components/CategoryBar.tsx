@@ -7,7 +7,6 @@ import HSubSection from "./HSubSection";
 interface categoryProps {
   title: string;
   link?: string;
-  // bgImage: string;
   items: {
     title: string;
   }[];
@@ -21,30 +20,30 @@ const CategoryBar: React.FC<categoryProps> = ({ title, link, items }) => {
   };
 
   return (
-<div >
+    <div className="flex flex-col items-center">
       {link ? (
         <div>
           {/* Navigation Tabs */}
-          <div className="flex justify-center space-x-4 text-2xl">
+          <div className="flex justify-center space-x-2 sm:space-x-4 text-sm sm:text-lg w-full px-2 sm:px-4">
             {items.map((item, index) => (
               <button
                 key={index}
                 onClick={() => handleTabClick(index)}
-                className={`px-4 py-2 font-medium hover:text-gray-600 ${
-                  activeIndex === index ? "underline font-black" : ""
-                } rounded  transition`}>
-                  <label className={` ${activeIndex ===index ? "font-black":""}`}>
-                    {item.title}
-                  </label>
+                className={`px-2 sm:px-4 py-1 sm:py-2 font-medium text-gray-800 hover:text-gray-600 ${
+                  activeIndex === index ? "underline font-bold" : ""
+                } rounded transition`}
+              >
+                <label className={`${activeIndex === index ? "font-bold" : ""}`}>
+                  {item.title}
+                </label>
               </button>
             ))}
           </div>
         </div>
       ) : (
-        <div>
-        </div>
+        <div></div>
       )}
-</div>
+    </div>
   );
 };
 
