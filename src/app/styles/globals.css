@@ -1,0 +1,21 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgb(49, 44, 44); /* Text color */
+    background-color: rgb(234, 227, 227); /* Example background color for dark mode */
+    font-family: ui-sans-serif; /* Example custom font */
+    
+  }
+  
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+    
+  }
+}
