@@ -4,6 +4,9 @@ import { usePathname } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react';
+import { FaInstagram, FaLine } from 'react-icons/fa'; // Import Line and Instagram icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFeather } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
     const { data: session } = useSession();
@@ -52,13 +55,24 @@ export default function Footer() {
                     </h1>
 
                 </div>
-                <div className="flex text-md rounded-xl bg-emerald-300 p-2">
-                    <Link href="https://lin.ee/81x9GA3"> LINE Official
+                <div className="flex text-md rounded-xl bg-gray-100 p-2">
+                    <Link href="https://lin.ee/81x9GA3">
+                         {/* LINE Official */}
+                         <FaLine className="text-xl text-green-500" /> {/* LINE icon */}
+
                     </Link>
                 </div>
-                <div className="flex text-md rounded-xl bg-purple-300 p-2">
+                <div className="flex text-md rounded-xl bg-gray-100 p-2">
                     <Link href="https://www.instagram.com/invites/contact/?igsh=yqj8hytynosc&utm_content=3gomaqc">
-                        Instagram
+                        {/* Instagram */}
+                        <FaInstagram className="text-xl text-purple-600" /> {/* Instagram icon */}
+
+                    </Link>
+                </div>
+                <div className="flex text-md rounded-xl bg-gray-100 p-2">
+                    <Link href="https://static.robinhood.in.th/app_link.html?URI=robinhoodth://merchantlanding/id/62654">
+                        {/* Robinhood with feather icon */}
+                        <FontAwesomeIcon icon={faFeather} className="text-xl text-violet-900" /> {/* Feather icon */}
                     </Link>
                 </div>
                 <button onClick={toggleMenu} className="lg:hidden focus:outline-none">
