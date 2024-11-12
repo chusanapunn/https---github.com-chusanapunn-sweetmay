@@ -40,10 +40,10 @@ export default function Header() {
 
     return (
         <header className="pt-4 px-4">
-            <div className="flex justify-between items-center font-thin ">
+            <div className="flex justify-between items-center">
                 <div className="flex">
-                    <h1 className="text-4xl drop-shadow-xl tracking-wider">
-                        <Link href="/" className="hover:text-gray-400 hover:animate-pulse text-2xl ">
+                    <h1 className="text-xl drop-shadow-xl tracking-wider">
+                        <Link href="/" className="hover:text-gray-400 hover:animate-pulse text-sm  ">
                             Sweetmay Studio
                         </Link>
                     </h1>

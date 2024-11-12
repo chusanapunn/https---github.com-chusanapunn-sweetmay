@@ -24,12 +24,12 @@ const CategoryBar: React.FC<categoryProps> = ({ title, link, items }) => {
       {link ? (
         <div>
           {/* Navigation Tabs */}
-          <div className="flex justify-center space-x-2 sm:space-x-4 text-sm sm:text-lg w-full px-2 sm:px-4">
+          <div className="flex justify-center space-x-2 font-serif font-thin text-sm sm:text-lg w-full p-2">
             {items.map((item, index) => (
               <button
                 key={index}
                 onClick={() => handleTabClick(index)}
-                className={`px-2 sm:px-4 py-1 sm:py-2 font-medium text-gray-800 hover:text-gray-600 ${
+                className={`  px-2 sm:px-4 py-1 text-xl text-gray-800 hover:text-gray-600 ${
                   activeIndex === index ? "underline font-bold" : ""
                 } rounded transition`}
               >
