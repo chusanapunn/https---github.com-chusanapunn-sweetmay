@@ -41,6 +41,7 @@ const SweetmayHomePage = () => {
                         items={[
                             {
                                 title: "Fruit Cake (S)",
+                                thtitle: "ฟรุตเค้ก (เล็ก)",
                                 desc: "Small Fruit Cake",
                                 price: "500 Baht",
                                 image: "/1_fruitcake_S.jpg"
@@ -48,6 +49,7 @@ const SweetmayHomePage = () => {
                             },
                             {
                                 title: "Fruit Cake (L)",
+                                thtitle: "ฟรุตเค้ก (ใหญ่)",
                                 desc: "Large Fruit Cake.",
                                 price: "1000 Baht",
                                 image: "/2_fruitcake_M.jpg"
@@ -56,6 +58,7 @@ const SweetmayHomePage = () => {
                             },
                             {
                                 title: "Soft Cookies",
+                                thtitle: "คุ้กกี้นิ่ม (ชิ้น)",
                                 desc: "Rich Soft Cookies. Price is per piece.",
                                 price: "65 Baht",
                                 image: "/3_soft_cookies.jpg"
@@ -64,6 +67,7 @@ const SweetmayHomePage = () => {
                             },
                             {
                                 title: "Cranberry Cookies",
+                                thtitle: "คุ้กกี้เเครนเบอรรี่",
                                 desc: "Sweet Cranberry Cookies for diet.",
                                 price: "200 Baht",
                                 image: "/4_cran_cookies.jpg"
@@ -72,6 +76,7 @@ const SweetmayHomePage = () => {
                             },
                             {
                                 title: "Caramel Cornflakes",
+                                thtitle: "คาราเมลคอร์นเฟลก",
                                 desc: "Caramel Cornflakes with cranberries, nuts.",
                                 price: "180 Baht",
                                 image: "/5_caramel_cornflakes.jpg"
@@ -80,14 +85,16 @@ const SweetmayHomePage = () => {
                             },
                             {
                                 title: "Coffee Almond Meringue",
+                                thtitle: "เมอเเรงอัลมอนด์กาเเฟ",
                                 desc: "Super Coffee Time Snack.",
                                 price: "180 Baht",
-                                image: "/6_coffee_almondMeringue.jpg"
+                                image: "/coffee_meringue.jpg"
 
                                 // image: images[6] ? images[6].image_url : "",
                             },
                             {
                                 title: "Sacher",
+                                thtitle: "ซาเชอร์ช๊อคโกเเลต",
                                 desc: "Sacher Chocolate cake, 2 pound size.",
                                 price: "1600 Baht",
                                 image: "/7_saucher2pnd.jpg"

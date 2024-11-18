@@ -8,13 +8,14 @@ interface MenuTabProps {
   title: string;
   items: {
     title: string;
+    thtitle: string;
     desc: string;
     price: string;
     image?: string;
   }[];
 }
 
-const Menutab: React.FC<MenuTabProps> = ({ title, items }) => {
+const Menutab: React.FC<MenuTabProps> = ({  items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
@@ -50,23 +51,22 @@ const Menutab: React.FC<MenuTabProps> = ({ title, items }) => {
 
   return (
     <div className="flex flex-col px-4 ">
-      <hr className="border-black w-full" />
-
       {/* Navigation Tabs */}
-      <div className="flex justify-center divide-x divide-black space-x-1 text-sm overflow-x-auto">
+      <div className="flex justify-center text-sm overflow-x-auto">
         {items.map((item, index) => (
           <button
             key={index}
             onClick={() => handleTabClick(index)}
-            className={`px-4 py-2 hover:text-gray-600 ${
-              activeIndex === index ? "underline decoration-3 font-black" : ""
+            className={`px-4 py-2 hover:text-gray-600 bg-orange-50/25 ${
+              activeIndex === index ? "underline decoration-3 font-black bg-orange-300/50" : ""
             } transition`}
           >
             {item.title}
+            <p className="text-xs">{item.thtitle}</p>
+            
           </button>
         ))}
       </div>
-      <hr className="border-black w-full" />
 
       {/* Swipeable content section */}
       <div
@@ -81,9 +81,10 @@ const Menutab: React.FC<MenuTabProps> = ({ title, items }) => {
             className={`min-w-full snap-center rounded-2xl shadow-lg flex flex-col bg-gray-100/75 items-center justify-center`}
           >
             <div className="text-center p-3">
-              <h3 className="text-2xl font-semibold underline">{item.title}</h3>
-              <p className="text-sm mt-2 italic">{item.desc}</p>
-              <p className="text-lg font-thin mt-2">{item.price}</p>
+              <h3 className="text-2xl font-semibold">{item.title}</h3>
+              <h2 className="text-xl font-thin">{item.thtitle}</h2>
+              {/* <p className="text-sm mt-2 italic">{item.desc}</p> */}
+              <p className="text-lg font-normal mt-2 italic">{item.price}</p>
             </div>
             {item.image && (
               <div className="relative w-256 h-256 flex-shrink-0 p-2">
@@ -115,9 +116,11 @@ const Menutab: React.FC<MenuTabProps> = ({ title, items }) => {
               &times;
             </button>
             <div className="text-center">
-              <h3 className="text-2xl font-semibold underline">{items[activeIndex].title}</h3>
-              <p className="text-sm mt-2 italic">{items[activeIndex].desc}</p>
-              <p className="text-lg font-thin mt-2">{items[activeIndex].price}</p>
+              <h3 className="text-2xl font-semibold">{items[activeIndex].title}</h3>
+              <h3 className="text-xl font-thin">{items[activeIndex].thtitle}</h3>
+
+              {/* <p className="text-sm mt-2 italic">{items[activeIndex].desc}</p> */}
+              <p className="text-lg font-normal mt-2 italic">{items[activeIndex].price}</p>
             </div>
             {items[activeIndex].image && (
               <Image
@@ -125,7 +128,7 @@ const Menutab: React.FC<MenuTabProps> = ({ title, items }) => {
                 alt={items[activeIndex].title}
                 width={512}
                 height={512}
-                className="w-full h-auto rounded-lg mt-4"
+                className="w-full h-auto rounded-xl mt-4"
               />
             )}
           </div>

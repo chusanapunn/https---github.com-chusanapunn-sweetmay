@@ -65,14 +65,14 @@ export default function Footer() {
                 <div className="flex text-md rounded-xl bg-gray-100 p-2">
                     <Link href="https://www.instagram.com/invites/contact/?igsh=yqj8hytynosc&utm_content=3gomaqc">
                         {/* Instagram */}
-                        <FaInstagram className="text-xl text-purple-600" /> {/* Instagram icon */}
+                        <FaInstagram className="text-xl text-violet-600" /> {/* Instagram icon */}
 
                     </Link>
                 </div>
                 <div className="flex text-md rounded-xl bg-gray-100 p-2">
                     <Link href="https://static.robinhood.in.th/app_link.html?URI=robinhoodth://merchantlanding/id/62654">
                         {/* Robinhood with feather icon */}
-                        <FontAwesomeIcon icon={faFeather} className="text-xl text-violet-900" /> {/* Feather icon */}
+                        <FontAwesomeIcon icon={faFeather} className="text-xl text-purple-700" /> {/* Feather icon */}
                     </Link>
                 </div>
                 <button onClick={toggleMenu} className="lg:hidden focus:outline-none">
@@ -118,7 +118,9 @@ export default function Footer() {
                         </>
                     )}
                 </ul>
+               
             </div>
+             <p className="font-serif text-center pb-4">tel: (+66) 0886947829 (K.May)</p>
         </footer>
     );
 }
