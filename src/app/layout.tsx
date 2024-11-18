@@ -5,6 +5,7 @@ import Header from "./components/Header";
 // import Image from "next/image";
 import Footer from './components/Footer';
 import SessionProviderWrapper from './session-provide-wrapper';
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body
         className={`divide-y h-dvh sm:h-full divide-black text-xs ${geistSans.variable} ${geistMono.variable}`} 
       >
+      <Analytics></Analytics>
       <SessionProviderWrapper key="unique">
           <Header></Header>
           {children}
