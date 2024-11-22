@@ -10,15 +10,15 @@ const SweetmayHomePage = () => {
     const [images, setImages] = useState<{image_url:string}[]>([]);
     const router = useRouter();
 
-    useEffect(() => {
-        const fetchImages = async () => {
-            const response = await fetch('/api/images');
-            const data = await response.json();
-            setImages(data);
-        };
+    // useEffect(() => {
+    //     const fetchImages = async () => {
+    //         const response = await fetch('/api/images');
+    //         const data = await response.json();
+    //         setImages(data);
+    //     };
 
-        fetchImages();
-    }, []);
+    //     fetchImages();
+    // }, []);
 
     return (
         <div className="flex flex-col justify-between overflow-hidden bg-no-repeat bg-cover bg-bottom drop-shadow-xl">

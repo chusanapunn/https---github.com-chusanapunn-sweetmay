@@ -94,7 +94,7 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
             onClick={() => handleTabClick(index)}
             className={`px-6 py-2 whitespace-nowrap bg-orange-50/25 text-sm sm:text-base ${
               activeIndex === index
-                ? "underline decoration-2 font-bold bg-orange-300"
+                ? "underline decoration-2 font-bold bg-orange-200"
                 : "hover:text-gray-600"
             } transition`}
           >

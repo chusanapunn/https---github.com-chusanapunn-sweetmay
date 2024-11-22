@@ -33,8 +33,6 @@ const config: Config = {
     'hover:text-gray-600',
     'underline',
     'decoration-2',
-    'font-bold',
-    'bg-orange-300',
     // Add any other dynamic classes you may use
   ],
 };
