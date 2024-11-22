@@ -86,7 +86,7 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
       {/* Navigation Tabs */}
       <div
         ref={tabsRef}
-        className="flex justify-evenly overflow-x-auto no-scrollbar "
+        className="flex justify-center overflow-x-auto no-scrollbar "
       >
         {items.map((item, index) => (
       <button
@@ -94,7 +94,7 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
         onClick={() => handleTabClick(index)}
         className={`px-6 py-2 whitespace-nowrap  text-sm sm:text-base ${
           activeIndex === index
-            ? "underline decoration-2 font-bold bg-orange-300/50"
+            ? "underline decoration-1 font-bold bg-orange-200/75"
             : "hover:text-gray-600"
         }`}
       >
@@ -127,7 +127,7 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
               <p className="text-sm sm:text-lg font-normal mt-2">{item.price}</p>
             </div>
             {item.image && (
-              <div className="relative w-48 h-48 sm:w-64 sm:h-64 flex-shrink-0 p-2">
+              <div className="relative w-5/12 h-10/12 flex-shrink-0 p-2 object-fill">
                 {loading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
                     <FaSpinner className="animate-spin text-gray-500 text-xl" />
@@ -136,8 +136,8 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={256}
-                  height={256}
+                  width={312}
+                  height={312}
                   className="w-full h-auto rounded-lg"
                   onLoad={() => setLoading(false)}
                   onError={() => setLoading(false)}
@@ -173,8 +173,8 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
               <Image
                 src={items[activeIndex].image}
                 alt={items[activeIndex].title}
-                width={512}
-                height={512}
+                width={800}
+                height={800}
                 className="w-full h-auto rounded-xl mt-4"
               />
             )}
