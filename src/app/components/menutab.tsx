@@ -86,7 +86,7 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
       {/* Navigation Tabs */}
       <div
         ref={tabsRef}
-        className="flex justify-start overflow-x-auto no-scrollbar"
+        className="flex justify-evenly overflow-x-auto no-scrollbar "
       >
         {items.map((item, index) => (
       <button
