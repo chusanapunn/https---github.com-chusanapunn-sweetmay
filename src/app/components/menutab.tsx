@@ -89,19 +89,20 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
         className="flex justify-start overflow-x-auto no-scrollbar"
       >
         {items.map((item, index) => (
-          <button
-            key={index}
-            onClick={() => handleTabClick(index)}
-            className={`px-6 py-2 whitespace-nowrap bg-orange-50/25 text-sm sm:text-base ${
-              activeIndex === index
-                ? "underline decoration-2 font-bold bg-orange-200"
-                : "hover:text-gray-600"
-            } transition`}
-          >
-            {item.title}
-            <p className="text-xs sm:text-sm">{item.thtitle}</p>
-          </button>
-        ))}
+      <button
+        key={index}  // Key prop ensures re-rendering when index changes
+        onClick={() => handleTabClick(index)}
+        className={`px-6 py-2 whitespace-nowrap bg-orange-50/25 text-sm sm:text-base ${
+          activeIndex === index
+            ? "underline decoration-2 font-bold bg-orange-300/50"
+            : "hover:text-gray-600"
+        }`}
+      >
+        {item.title}
+        <p className="text-xs sm:text-sm">{item.thtitle}</p>
+      </button>
+    ))}
+
       </div>
 
       {/* Swipeable Content Section */}
