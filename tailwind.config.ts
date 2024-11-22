@@ -26,5 +26,16 @@ const config: Config = {
     },
   },
   plugins: [],
+  safelist: [
+    'bg-orange-50/25',
+    'text-sm',
+    'sm:text-base',
+    'hover:text-gray-600',
+    'underline',
+    'decoration-2',
+    'font-bold',
+    'bg-orange-300',
+    // Add any other dynamic classes you may use
+  ],
 };
 export default config;
