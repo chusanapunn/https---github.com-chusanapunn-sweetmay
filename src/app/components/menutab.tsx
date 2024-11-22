@@ -92,7 +92,7 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
       <button
         key={index}  // Key prop ensures re-rendering when index changes
         onClick={() => handleTabClick(index)}
-        className={`px-6 py-2 whitespace-nowrap bg-orange-50/25 text-sm sm:text-base ${
+        className={`px-6 py-2 whitespace-nowrap  text-sm sm:text-base ${
           activeIndex === index
             ? "underline decoration-2 font-bold bg-orange-300/50"
             : "hover:text-gray-600"
