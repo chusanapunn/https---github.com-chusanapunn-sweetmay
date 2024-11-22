@@ -31,9 +31,9 @@ const SweetmayHomePage = () => {
                         // bgImage={images[0]}
                         items={[
                             { title: 'Winter 2024 Menu' },
-                            // { title: 'Pastry' },
-                            // { title: 'Bakery' },
-                            // { title: 'Cuisine' },
+                            { title: 'Pastry' },
+                            { title: 'Bakery' },
+                            { title: 'Cuisine' },
                         ]}
                     />
                     <Menutab
@@ -57,8 +57,8 @@ const SweetmayHomePage = () => {
                                 // image: images[4] ? images[4].image_url : "",
                             },
                             {
-                                title: "Soft Cookies",
-                                thtitle: "คุ้กกี้นิ่ม (ชิ้น)",
+                                title: "Soft Cookies (Milk/ White)",
+                                thtitle: "คุ้กกี้นิ่ม (ธรรมดา/ไวท์ชอค) (ชิ้น)",
                                 desc: "Rich Soft Cookies. Price is per piece.",
                                 price: "65 Baht",
                                 image: "/3_soft_cookies.jpg"

@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from './components/Footer';
 import SessionProviderWrapper from './session-provide-wrapper';
 import { Analytics } from "@vercel/analytics/react"
+import Snowfall from "./components/snowFall";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
       <Analytics></Analytics>
       <SessionProviderWrapper key="unique">
+        <Snowfall/>
           <Header></Header>
           {children}
           <Footer></Footer>

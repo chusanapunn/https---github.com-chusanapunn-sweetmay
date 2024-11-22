@@ -20,23 +20,31 @@ const CategoryBar: React.FC<categoryProps> = ({ title, link, items }) => {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center overflow-scroll overflow-y-hidden  no-scrollbar">
       {link ? (
         <div>
           {/* Navigation Tabs */}
-          <div className="flex justify-center space-x-2 font-serif font-thin text-sm sm:text-lg w-full p-2">
+          <div className="flex justify-center items-center h-12 space-x-2 font-serif font-thin text-sm w-full m-2">
             {items.map((item, index) => (
               <button
-                key={index}
-                onClick={() => handleTabClick(index)}
-                className={`  px-2 sm:px-4 py-1 text-xl text-gray-800 hover:text-gray-600 ${
-                  activeIndex === index ? "underline font-bold" : ""
-                } rounded transition`}
-              >
-                <label className={`${activeIndex === index ? "font-bold" : ""}`}>
-                  {item.title}
-                </label>
-              </button>
+              key={index}
+              onClick={() => handleTabClick(index)}
+              className={`relative px-2 sm:px-4 py-1 text-sm text-gray-800 hover:text-gray-600 ${
+                activeIndex === index ? "font-bold" : ""
+              } transition`}
+            >
+              <label className={`${activeIndex === index ? "font-bold" : ""}`}>
+                {item.title}
+              </label>
+              {activeIndex === index && (
+                    <img 
+                          src="/title_ornament.png" 
+                          alt="ASD"
+                          className="w-32 m-auto"
+                          />
+              )}
+            </button>
+            
             ))}
           </div>
         </div>
