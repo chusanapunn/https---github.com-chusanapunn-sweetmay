@@ -46,13 +46,12 @@ html {
   position: fixed; /* Avoid affecting page layout */
   top: -10px;
   left: 50%;
-  width: 2%;
-  height: 2%;
+  width: 8px;
+  height: 8px; 
   background: white;
   opacity: 0.8;
-  border-radius: 50%;
-  animation: snow 6s cubic-bezier(0.25, 0.1, 0.25, 1); /* Slower animation */
-  box-shadow: 0 0 70% rgba(255, 255, 255, 0.8);
+  border-radius: 100%;
+  animation: snow 6s cubic-bezier(0.25, 0.1, 0.25, 1); 
   pointer-events: none;
 }
 
@@ -71,8 +70,8 @@ html {
 .leaf {
   position: fixed; /* Avoid affecting page layout */
   top: -10px;
-  width: 24%;
-  height: 24%;
+  width: 64px;
+  height: 64px;
   border:none;
   background-image: url('/christmas_leaves.png');
   background-size: contain;

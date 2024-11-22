@@ -10,10 +10,12 @@ interface categoryProps {
   items: {
     title: string;
   }[];
+  activeIndex: number;
+  setActiveIndex: (index: number) => void;
 }
 
-const CategoryBar: React.FC<categoryProps> = ({ title, link, items }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+const CategoryBar: React.FC<categoryProps> = ({ title, link, items, activeIndex, setActiveIndex }) => {
+  
 
   const handleTabClick = (index: number) => {
     setActiveIndex(index);
@@ -39,7 +41,7 @@ const CategoryBar: React.FC<categoryProps> = ({ title, link, items }) => {
               {activeIndex === index && (
                     <img 
                           src="/title_ornament.png" 
-                          alt="ASD"
+                          alt="textOrnament"
                           className="w-32 m-auto"
                           />
               )}

@@ -5,8 +5,8 @@ const createFallingElement = (className: string) => {
     const element = document.createElement("div");
     element.classList.add(className);
     element.style.left = Math.random() * window.innerWidth + "px";
-    element.style.animationDuration = Math.random() * 4 + 8 + "s";
-    element.style.transform = `scale(${Math.random() * 0.1+0.4})`;
+    element.style.animationDuration = Math.random() * 4 + 20 + "s";
+    element.style.transform = `scale(${Math.random() * 2+0.1})`;
     document.body.appendChild(element);
   
     setTimeout(() => {

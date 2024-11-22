@@ -39,7 +39,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="pt-4 px-4">
+        <header className="px-4">
             <div className="flex justify-between items-center">
                 <div className="flex">
                     <h1 className="text-xl drop-shadow-xl tracking-wider">
@@ -76,8 +76,8 @@ export default function Header() {
 
                 {/* Navigation Links */}
                 <ul
-                    className={`drop-shadow-sm lg:flex lg:space-x-4 tracking-widest font-thin text-2xl
-                    ${isOpen ? 'ease-out absolute top-16 left-0 w-full flex flex-col space-y-2 z-50' : 'hidden'}
+                    className={`drop-shadow-sm lg:flex lg:space-x-4 tracking-widest font-thin text-xl
+                    ${isOpen ? 'ease-out absolute top-10 left-0 w-full flex flex-col space-y-2 z-50' : 'hidden'}
                     lg:visible lg:h-auto lg:w-auto lg:relative`}
                 >
                     <li className={`text-right mr-4 ${currentPage === '/sweetmay' ? 'text-white' : 'text-gray-500'}`}>
@@ -101,7 +101,7 @@ export default function Header() {
                 
             </div>
             <hr
-                className={`mt-4 invisible ${isOpen ? 'pb-32' : ''}`}
+                className={`mt-2 invisible ${isOpen ? 'pb-32' : ''}`}
             />
         </header>
     );

@@ -36,7 +36,7 @@ export default function Footer() {
     }, [session]);
 
     return (
-        <footer className="relative">
+        <footer className="relative bg-orange-50">
             <div className="flex justify-between items-center font-thin font-serif px-4 py-2">
 
                 <div className="flex text-gray-400">
@@ -94,7 +94,7 @@ export default function Footer() {
 
                 {/* Navigation Links */}
                 <ul
-                    className={`absolute bottom-full left-0 w-full py-4 space-y-4 text-right z-50 text-gray-400
+                    className={`bg-orange-50 absolute bottom-full left-0 w-full py-4 space-y-4 text-right z-49 text-gray-400
                     ${isOpen ? 'block' : 'hidden'} lg:relative lg:flex-row lg:bg-transparent lg:p-0 lg:w-auto lg:space-y-0`}
                 >
                     {session ? (
@@ -105,7 +105,7 @@ export default function Footer() {
                         </li>
                     ) : (
                         <>
-                            <li className="text-right pr-5">
+                            <li className="text-right pr-5 ">
                                 <Link href="/register" className="hover:text-gray-400">
                                     Create an Account
                                 </Link>

@@ -92,9 +92,9 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
       <button
         key={index}  // Key prop ensures re-rendering when index changes
         onClick={() => handleTabClick(index)}
-        className={`px-6 py-2 whitespace-nowrap  text-sm sm:text-base ${
+        className={`px-6 py-1 whitespace-nowrap  text-sm sm:text-base ${
           activeIndex === index
-            ? "underline decoration-1 font-bold bg-orange-200/75"
+            ? "underline decoration-1 font-bold bg-orange-200/50 text-gray-700"
             : "hover:text-gray-600"
         }`}
       >
@@ -108,7 +108,7 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
       {/* Swipeable Content Section */}
       <div
         ref={containerRef}
-        className="flex overflow-x-auto snap-x snap-mandatory space-x-4 py-4 no-scrollbar"
+        className=" flex overflow-x-auto snap-x snap-mandatory space-x-4 py-2 no-scrollbar"
       >
         {items.map((item, index) => (
           <div
@@ -127,7 +127,7 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
               <p className="text-sm sm:text-lg font-normal mt-2">{item.price}</p>
             </div>
             {item.image && (
-              <div className="relative w-5/12 h-10/12 flex-shrink-0 p-2 object-fill">
+              <div className="relative w-7/12 flex-shrink-0 p-2 object-fill">
                 {loading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
                     <FaSpinner className="animate-spin text-gray-500 text-xl" />
