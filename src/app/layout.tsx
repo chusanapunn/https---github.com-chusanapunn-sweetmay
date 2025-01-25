@@ -36,7 +36,7 @@ export default function RootLayout({
       >
       <Analytics></Analytics>
       <SessionProviderWrapper key="unique">
-        <Snowfall/>
+
           <Header></Header>
           {children}
           <Footer></Footer>

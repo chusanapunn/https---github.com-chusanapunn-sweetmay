@@ -108,13 +108,13 @@ const Menutab: React.FC<MenuTabProps> = ({ items }) => {
       {/* Swipeable Content Section */}
       <div
         ref={containerRef}
-        className=" flex overflow-x-auto snap-x snap-mandatory space-x-4 py-2 no-scrollbar"
+        className=" flex  snap-x snap-mandatory space-x-4 py-2 overflow-x-auto  scrollbar-hide "
       >
         {items.map((item, index) => (
           <div
             key={index}
             onClick={openModal}
-            className="min-w-full snap-center flex flex-col items-center justify-center bg-gray-100 rounded-2xl shadow-lg"
+            className="min-w-[70%] snap-center flex flex-col items-center justify-center bg-gray-100 rounded-2xl shadow-lg"
           >
             <div className="text-center p-3">
               <h3 className="text-lg sm:text-2xl font-semibold">{item.title}</h3>
