@@ -7,8 +7,8 @@ import CategoryBar from '../components/CategoryBar';
 import Menutab from "../components/menutab";
 
 const SweetmayHomePage = () => {
-    const [images, setImages] = useState<{image_url:string}[]>([]);
-    const router = useRouter();
+    // const [images, setImages] = useState<{image_url:string}[]>([]);
+    // const router = useRouter();
 
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -33,7 +33,7 @@ const SweetmayHomePage = () => {
               title: "Orange Meringue",
               thtitle: "เมอเเรงส้ม",
               desc: "Meringue",
-              price: "1000 Baht",
+              price: "- Baht",
               image: "/B_1.jpg",
             },
           ],
@@ -41,7 +41,13 @@ const SweetmayHomePage = () => {
           
         // ],
         [       // BAKERY
-           
+          {
+            title: "Orange Roll Cake",
+            thtitle: "โรลส้ม",
+            desc: "โรลส้ม",
+            price: "420 Baht",
+            image: "/B_1.jpg",
+          },
           {
             title: "Sacher",
             thtitle: "ซาเชอร์ช๊อคโกเเลต",
@@ -84,6 +90,14 @@ const SweetmayHomePage = () => {
             price: "180 Baht",
             image: "/5_caramel_cornflakes.jpg",
           },
+          
+          {
+            title: "Orange Meringue",
+            thtitle: "เมอเเรงส้ม",
+            desc: "Meringue",
+            price: "- Baht",
+            image: "/B_1.jpg",
+          },
           {
             title: "Coffee Almond Meringue",
             thtitle: "เมอเเรงอัลมอนด์กาเเฟ",
@@ -91,6 +105,7 @@ const SweetmayHomePage = () => {
             price: "180 Baht",
             image: "/coffee_meringue.jpg",
           }, 
+          
           // {
           //   title: "Focaccia",
           //   thtitle: "ฟอคัซเซีย",

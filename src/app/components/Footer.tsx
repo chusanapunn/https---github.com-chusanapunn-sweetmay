@@ -36,7 +36,7 @@ export default function Footer() {
     }, [session]);
 
     return (
-        <footer className="relative bg-orange-50">
+        <footer className="relative">
             <div className="flex justify-between items-center font-thin font-serif px-4 py-2">
 
                 <div className="flex text-gray-400">
@@ -47,7 +47,7 @@ export default function Footer() {
                                 `Hello, ${session.user?.name || 'User'}`}
                             </Link>
                         ) : (
-                            <Link href="/register" className="hover:text-gray-400 text-xl">
+                            <Link href="/register" className="text-gray-800 text-xl">
                                 Guest
                             </Link>
                         )}
@@ -55,21 +55,21 @@ export default function Footer() {
                     </h1>
 
                 </div>
-                <div className="flex text-md rounded-xl bg-gray-100 p-2">
+                <div className="flex text-md rounded-xl bg-white p-2">
                     <Link href="https://lin.ee/81x9GA3">
                          {/* LINE Official */}
                          <FaLine className="text-xl text-green-500" /> {/* LINE icon */}
 
                     </Link>
                 </div>
-                <div className="flex text-md rounded-xl bg-gray-100 p-2">
+                <div className="flex text-md rounded-xl bg-white p-2">
                     <Link href="https://www.instagram.com/invites/contact/?igsh=yqj8hytynosc&utm_content=3gomaqc">
                         {/* Instagram */}
                         <FaInstagram className="text-xl text-violet-600" /> {/* Instagram icon */}
 
                     </Link>
                 </div>
-                <div className="flex text-md rounded-xl bg-gray-100 p-2">
+                <div className="flex text-md rounded-xl bg-white p-2">
                     <Link href="https://static.robinhood.in.th/app_link.html?URI=robinhoodth://merchantlanding/id/62654">
                         {/* Robinhood with feather icon */}
                         <FontAwesomeIcon icon={faFeather} className="text-xl text-purple-700" /> {/* Feather icon */}
@@ -120,7 +120,7 @@ export default function Footer() {
                 </ul>
                
             </div>
-             <p className="font-serif text-center pb-4">tel: (+66) 0886947829 (K.May)</p>
+             <p className="font-serif text-center pb-4 text-md">tel: (+66) 0886947829 (K.May)</p>
         </footer>
     );
 }

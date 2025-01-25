@@ -31,11 +31,12 @@ const Section: React.FC<SectionProps> = ({
         {link ? (
           <div className="inner-shadow ">
             <Link href={link}>
-              <h1 className=" p-4 transition duration-300 opacity-0 hover:opacity-100 tracking-widest font-serif text-3xl pb-48">
+              <h1 className=" p-4 transition duration-300 opacity-0 hover:opacity-100 
+              tracking-widest font-serif text-3xl pb-48">
                 {title}
               </h1>
               </Link>
-              <div className="flex flex-col">
+              <div className="flex flex-col p-4 gap-2 ">
                 {items.map((item, index) => (
                   <SubSection
                     key={index}

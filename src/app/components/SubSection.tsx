@@ -12,8 +12,8 @@ interface SubSectionProps {
 
 const SubSection: React.FC<SubSectionProps> = ({ title, link, subtitle, image }) => {
   return (
-<div className="flex flex-col min-h-[124px] bg-black/30 hover:bg-black/70 w-full transition duration-300 ease-in-out">
-  <Link href= {link} className=" font-medium">
+<div className="rounded-lg flex flex-col min-h-[124px] bg-black/50 hover:bg-black/90 w-full transition duration-300 ease-in-out">
+  <Link href= {link} className=" ">
     <div className="flex flex-col justify-between text-white drop-shadow-md shadow-inner m-4">
         <h1 className=" sm:text-sm font-serif ">
           {title}

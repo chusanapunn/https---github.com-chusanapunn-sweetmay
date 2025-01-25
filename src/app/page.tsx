@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap gap-2 ">
         <Section
           title="Sweetmay"
           link="/sweetmay"

@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import HSubSection from "./HSubSection";
+// import Link from 'next/link';
+// import HSubSection from "./HSubSection";
 
 interface categoryProps {
   title: string;
@@ -22,7 +22,7 @@ const CategoryBar: React.FC<categoryProps> = ({ title, link, items, activeIndex,
   };
 
   return (
-    <div className="flex flex-col items-center overflow-scroll overflow-y-hidden  no-scrollbar">
+    <div className="flex flex-col items-center overflow-scroll overflow-y-hidden no-scrollbar">
       {link ? (
         <div>
           {/* Navigation Tabs */}
